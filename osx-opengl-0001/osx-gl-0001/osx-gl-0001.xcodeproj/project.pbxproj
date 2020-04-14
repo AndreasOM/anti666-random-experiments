@@ -9,8 +9,10 @@
 /* Begin PBXBuildFile section */
 		E938ADCC244616C700E48387 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E938ADCB244616C700E48387 /* AppDelegate.m */; };
 		E938ADCE244616CA00E48387 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E938ADCD244616CA00E48387 /* Assets.xcassets */; };
-		E938ADD1244616CA00E48387 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E938ADCF244616CA00E48387 /* MainMenu.xib */; };
 		E938ADD4244616CA00E48387 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E938ADD3244616CA00E48387 /* main.m */; };
+		E938ADE0244618DF00E48387 /* MainWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = E938ADDF244618DF00E48387 /* MainWindow.m */; };
+		E938ADE324461D5500E48387 /* OpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = E938ADE224461D5500E48387 /* OpenGLView.m */; };
+		E938ADE6244621CF00E48387 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E938ADE5244621CF00E48387 /* GLKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,10 +20,14 @@
 		E938ADCA244616C700E48387 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E938ADCB244616C700E48387 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E938ADCD244616CA00E48387 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E938ADD0244616CA00E48387 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		E938ADD2244616CA00E48387 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E938ADD3244616CA00E48387 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E938ADD5244616CA00E48387 /* osx_gl_0001.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = osx_gl_0001.entitlements; sourceTree = "<group>"; };
+		E938ADDE244618DF00E48387 /* MainWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainWindow.h; sourceTree = "<group>"; };
+		E938ADDF244618DF00E48387 /* MainWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainWindow.m; sourceTree = "<group>"; };
+		E938ADE124461D5500E48387 /* OpenGLView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenGLView.h; sourceTree = "<group>"; };
+		E938ADE224461D5500E48387 /* OpenGLView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenGLView.m; sourceTree = "<group>"; };
+		E938ADE5244621CF00E48387 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E938ADE6244621CF00E48387 /* GLKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +47,7 @@
 			children = (
 				E938ADC9244616C700E48387 /* osx-gl-0001 */,
 				E938ADC8244616C700E48387 /* Products */,
+				E938ADE4244621CE00E48387 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,12 +65,23 @@
 				E938ADCA244616C700E48387 /* AppDelegate.h */,
 				E938ADCB244616C700E48387 /* AppDelegate.m */,
 				E938ADCD244616CA00E48387 /* Assets.xcassets */,
-				E938ADCF244616CA00E48387 /* MainMenu.xib */,
 				E938ADD2244616CA00E48387 /* Info.plist */,
 				E938ADD3244616CA00E48387 /* main.m */,
 				E938ADD5244616CA00E48387 /* osx_gl_0001.entitlements */,
+				E938ADDE244618DF00E48387 /* MainWindow.h */,
+				E938ADDF244618DF00E48387 /* MainWindow.m */,
+				E938ADE124461D5500E48387 /* OpenGLView.h */,
+				E938ADE224461D5500E48387 /* OpenGLView.m */,
 			);
 			path = "osx-gl-0001";
+			sourceTree = "<group>";
+		};
+		E938ADE4244621CE00E48387 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E938ADE5244621CF00E48387 /* GLKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,7 +142,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E938ADCE244616CA00E48387 /* Assets.xcassets in Resources */,
-				E938ADD1244616CA00E48387 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,21 +154,12 @@
 			files = (
 				E938ADD4244616CA00E48387 /* main.m in Sources */,
 				E938ADCC244616C700E48387 /* AppDelegate.m in Sources */,
+				E938ADE0244618DF00E48387 /* MainWindow.m in Sources */,
+				E938ADE324461D5500E48387 /* OpenGLView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		E938ADCF244616CA00E48387 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E938ADD0244616CA00E48387 /* Base */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E938ADD6244616CA00E48387 /* Debug */ = {
@@ -273,6 +282,10 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-DGL_SILENCE_DEPRECATION",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "tv.anti666.osx-gl-0001";
 				PRODUCT_NAME = "$(TARGET_NAME)";
