@@ -9,5 +9,14 @@ Simple command line tool to create textures from palettes.
 
 
 # Notes
+
+## Supported file types
+
+### Input
+- Gimp Palette .gpl
+
+### Output
+- RBGA8888 .png
+
 ## Palette sources
 - lospec [https://lospec.com/palette-list]
