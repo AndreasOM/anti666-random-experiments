@@ -1,0 +1,20 @@
+[package]
+name = "palette2texture"
+version = "0.1.0"
+authors = ["Andreas Neukoetter <andreas@omni-mad.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+name = "palette2texture"
+path = "src/lib.rs"
+
+[[bin]]
+name = "palette2texture"
+path = "src/palette2texture.rs"
+
+[dependencies]
+clap = "~2.33.0"
+image = "~0.22"
+gimp_palette = "~0.1"
